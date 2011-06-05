@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, AlertNeedHelp!</string>
+    <string name="app_name">BaconFindingPeople</string>
+    <string name="alertstring_title">I Need Help</string>
+</resources>
