@@ -7,12 +7,12 @@
 <TextView  
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
-    android:text="@string/alertstring_title"
+    android:text="@string/settings_title"
     />
-<ToggleButton android:id="@+id/togglebutton"
-    android:layout_width="wrap_content"
+<Button android:id="@+id/settings_back_button"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:textOn="Audible Alert on"
-    android:textOff="Audible Alert off"
+    android:textOn="Back"
+    android:textOff="Back"
     />
 </LinearLayout>

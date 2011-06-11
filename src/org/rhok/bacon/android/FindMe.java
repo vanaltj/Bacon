@@ -7,11 +7,13 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ToggleButton;
 
-public class AlertNeedHelp extends Activity implements OnClickListener {
+public class FindMe extends Activity implements OnClickListener {
 	
 	private ToggleButton aac = null;
+	private Button bc = null;
 	private MediaPlayer mp;
 	boolean active;
 
@@ -20,9 +22,15 @@ public class AlertNeedHelp extends Activity implements OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         active = false;
-        setContentView(R.layout.main);
-        aac = (ToggleButton) findViewById(R.id.togglebutton);
+        setContentView(R.layout.findme);
+        
+        // Buttons!
+        aac = (ToggleButton) findViewById(R.id.findme_sound_toggle_button);
+        bc = (Button) findViewById(R.id.findme_back_button);
+        
         aac.setOnClickListener(this);
+        bc.setOnClickListener(this);
+        
         mp = MediaPlayer.create(this, R.raw.emergency_alert_system_attention_signal40s_loop);
 		mp.setLooping(true);
     }
@@ -44,6 +52,15 @@ public class AlertNeedHelp extends Activity implements OnClickListener {
 					ex.printStackTrace();
 				}
 			}
+		} else if (v.equals(bc)) {
+			finish();
 		}
 	}
+
+	//@Override
+	//protected void onDestroy() {
+	//	if (this.mp.isPlaying()) {
+	//		mp.stop();
+	//	}
+	//}
 }
