@@ -5,8 +5,10 @@
       android:versionName="1.0">
     <uses-sdk android:minSdkVersion="10" />
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <application android:icon="@drawable/icon" android:label="@string/app_name">
         <activity android:name=".Bacon"
                   android:label="@string/app_name">
@@ -17,8 +19,16 @@
         </activity>
         <activity android:name=".FindMe">
         </activity>
+        <activity android:name=".FindThem">
+        </activity>
         <activity android:name=".BaconSettings">
         </activity>
-
+        <service android:name="services.BaconBluetoothService"
+                 android:label="@string/app_shortname"
+                 android:description="@string/bluetooth_desc"
+                 android:enabled="true"
+                 android:exported="false"
+                 android:permission="android.permission.BLUETOOTH_ADMIN">
+        </service>
     </application>
 </manifest>

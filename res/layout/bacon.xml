@@ -1,30 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bacon_viewflipper"
+    android:autoStart="false"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/bacon_title"
-    />
-<Button android:id="@+id/bacon_alert_button"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textOn="HELP"
-    android:textOff="HELP"
-    />
-<Button android:id="@+id/bacon_search_button"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textOn="SEARCH"
-    android:textOff="SEARCH"
-    />
-<Button android:id="@+id/bacon_exit_button"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textOn="Exit"
-    android:textOff="Exit"
-    />
-</LinearLayout>
+    android:visibility="visible">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="First" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="@string/bacon_title" />
+        <Button android:id="@+id/bacon_alert_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_button" />
+        <Button android:id="@+id/bacon_exit_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/exit_button" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView  
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:text="Last" />
+    </LinearLayout>
+</ViewFlipper>

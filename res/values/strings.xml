@@ -12,6 +12,12 @@
     <string name="settings_title">Settings</string>
     
     <string name="findme_title">I Need Help</string>
+    
+    <string name="bluetooth_desc">Bluetooth service for Bacon, your emergency beacon.</string>
 
-
+    <string name="bluetooth_service_connected">Connected to bluetooth service.</string>
+    <string name="bluetooth_service_disconnected">Disconnected from bluetooth service.</string>
+    
+    <string name="alert_button">HELP!</string>
+    <string name="exit_button">Exit</string>
 </resources>
